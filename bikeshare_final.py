@@ -5,8 +5,8 @@ import numpy as np
 CITY_DATA = { 'c': 'chicago.csv',
               'n': 'new_york_city.csv',
               'w': 'washington.csv' }
-months = ['January', 'February', 'March', 'April', 'May', 'June', 'All']
-days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday', 'All']
+MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'All']
+DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday', 'All']
 
 def readable_time(secs):
     """
@@ -51,14 +51,14 @@ def get_filters():
     month = 0
     print('\nOkidoki. Do you want to filter this dataset by month? \nNote: January, February, March, April, May and June are available. \nIf you want to see all the data, please type: all.')
     month = input('\n  Filter month: ').title()
-    while month not in months:
+    while month not in MONTHS:
         print('That was no valid input. Please try again...')
         month = input('\nFilter month: ').title()
         
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     print('\nOk, thanks. Last question for now: Do you want to filter by the day of the week? \nPlease type: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or Sunday? If you don\'t want to filter, please type: all.')
     day = input('\n  Filter day: ').title()
-    while day not in days:
+    while day not in DAYS:
         print('That was no valid input. Please try again...')
         day = input('\nFilter day: ').title()
         
@@ -91,8 +91,8 @@ def load_data(city, month, day):
    
     # filter by month if applicable
     if month != 'All':
-        # use the index of the months list to get the corresponding int
-        month = months.index(month)+1
+        # use the index of the MONTHS list to get the corresponding int
+        month = MONTHS.index(month)+1
     
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
@@ -115,7 +115,7 @@ def time_stats(df):
     
     # TO DO: display the most common month
     most_common_month = df['month'].mode()[0]
-    print('Most common month: ', months[most_common_month - 1])
+    print('Most common month: ', MONTHS[most_common_month - 1])
 
     # TO DO: display the most common day of week
     print('Most common day of week: ', df['day_of_week'].mode()[0])
