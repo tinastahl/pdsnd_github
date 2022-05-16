@@ -10,7 +10,7 @@ days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sund
 
 def readable_time(secs):
     """
-    This function splits seconds into days, hours, minutes and seconds 
+    This awesome function splits seconds into days, hours, minutes and seconds 
     Args:
         secs - seconds 
     Returns:
