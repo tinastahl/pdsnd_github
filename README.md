@@ -10,7 +10,9 @@ Awesome Bikeshare Insight
 Explore Bikeshare data in a very convenient way
 
 ### Files used
-Include the files used
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
 Speacial thanks to **udacity**
