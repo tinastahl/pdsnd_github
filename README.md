@@ -8,6 +8,12 @@ Awesome Bikeshare Insight
 
 ### Description
 Explore Bikeshare data in a very convenient way
+This program allows you to get a better understandig of Motivate's bikeshare data. It will provide statistics on
+- Time 
+- Stations
+- Trip duration
+- Users 
+There is data available for New York, Chicago and Washington.
 
 ### Files used
 chicago.csv
